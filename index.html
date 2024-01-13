@@ -22,6 +22,7 @@
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             text-align: center;
+            position: relative;
         }
 
         .input-group {
@@ -56,6 +57,18 @@
             border-radius: 4px;
             cursor: pointer;
         }
+
+        .login-as-guest-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +85,7 @@
             <button class="redirect-btn" onclick="redirectToItch()">Go to Itch Web</button>
             <button class="redirect-btn" onclick="redirectToDirectWeb()">Go to Direct Web</button>
         </div>
+        <button class="login-as-guest-btn" onclick="loginAsGuest()">Login as Guest</button>
     </div>
 
     <script>
@@ -101,6 +115,11 @@
 
         function redirectToDirectWeb() {
             window.location.href = "https://gd.games/shadowfreddy2555/test2-";
+        }
+
+        function loginAsGuest() {
+            clearLoginForm();
+            alert("Logged in as Guest.");
         }
     </script>
 </body>
